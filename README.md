@@ -9,19 +9,22 @@ Esta app permite al usuario seleccionar una fecha futura y ver cuántos días fa
 - expo-notifications
 - DateTimePicker
 
-## 📦 Instalación
-
-```bash
-git clone https://github.com/EnriqueDeveloper/contador-dias-evento.git
-cd contador-dias-evento
-npm install
-npx expo start
 
 ## 📱 Imagenes
 
 ![Ícono de la app](./assets/images/icon.png)
 ![Primer screem](./assets/images/imagenuno.png)
 ![Segundo screem](./assets/images/imagendos.png)
+
+
+## 📦 Instalación
+```bash
+git clone https://github.com/EnriqueDeveloper/contador-dias-evento.git
+cd contador-dias-evento
+npm install
+npx expo start
+
+
 
 
 
