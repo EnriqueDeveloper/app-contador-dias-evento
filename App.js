@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Button,Platform, TouchableOpacity } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { useState } from 'react';
 
 export default function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -25,19 +26,28 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>¿Cuántos días faltan?</Text>
-      <Button title="Seleccionar fecha" onPress={() => setShowPicker(true)} />
+      <Text style={{marginBottom:5}}>Selecciona la fecha del evento</Text>
+      <TouchableOpacity style={styles.boton} title="Seleccionar fecha" onPress={() => setShowPicker(true)} >
+        <Text style={styles.textoboton}>Seleccionar fecha</Text>
       {showPicker && (
         <DateTimePicker
-          value={selectedDate}
-          mode="date"
-          display="default"
-          onChange={onChange}
+        value={selectedDate}
+        mode="date"
+        display="default"
+        onChange={onChange}
         />
       )}
+      </TouchableOpacity>
       {daysLeft !== null && (
-        <Text style={styles.result}>
-          Faltan {daysLeft} día{daysLeft !== 1 ? 's' : ''} para tu evento 🎉
+        <View style={styles.containertext}>
+        <Text style={{marginTop:20 , fontSize:20}}>
+          Faltan 
         </Text>
+        <Text style={styles.result}>{daysLeft}</Text>
+        <Text style={{fontSize:20}}>
+          día{daysLeft !== 1 ? 's' : ''} para tu evento
+        </Text>
+        </View>
       )}
       <StatusBar style="auto" />
     </View>
@@ -50,5 +60,33 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding:20
   },
+  containertext:{
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: { 
+    fontSize: 26, 
+    marginBottom: 15 ,
+    fontWeight:'bold'
+  },
+  result: { 
+    fontSize: 50, 
+    
+    color: '#007AFF' ,
+    fontWeight:'bold'
+  },
+  boton:{
+    backgroundColor:'#007AFF',
+    color:'#fff',
+    borderRadius:10,
+  },
+  textoboton:{
+    color:'#fff',
+    fontSize:18,
+    paddingHorizontal:50,
+    paddingVertical:15,
+    fontWeight:'600'
+  }
 });
