@@ -17,11 +17,8 @@ cd contador-dias-evento
 npm install
 npx expo start
 ```
-## 🖼️ Vista previa de recursos
-
-<img src="./assets/images/icon.png" alt="Ícono de la app" width="120"/>
-<img src="./assets/images/imagenuno.png" alt="Captura de pantalla 1" width="300"/>
-<img src="./assets/images/imagendos.png" alt="Captura de pantalla 2" width="300"/>
+## 🖼️ Vista previa 
+![portada](./assets/images/portada.png)
 
 
 
