@@ -17,4 +17,11 @@ cd contador-dias-evento
 npm install
 npx expo start
 
-<img width="276" height="641" alt="Captura de pantalla 2025-10-14 141908" src="https://github.com/user-attachments/assets/a13d5808-52ef-4ea4-9147-691e095e9951" />
+## 📱 Imagenes
+
+![Ícono de la app](./assets/images/icon.png)
+![Primer screem](./assets/images/imagenuno.png)
+![Segundo screem](./assets/images/imagendos.png)
+
+
+
