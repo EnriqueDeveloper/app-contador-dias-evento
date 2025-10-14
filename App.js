@@ -24,7 +24,21 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.title}>¿Cuántos días faltan?</Text>
+      <Button title="Seleccionar fecha" onPress={() => setShowPicker(true)} />
+      {showPicker && (
+        <DateTimePicker
+          value={selectedDate}
+          mode="date"
+          display="default"
+          onChange={onChange}
+        />
+      )}
+      {daysLeft !== null && (
+        <Text style={styles.result}>
+          Faltan {daysLeft} día{daysLeft !== 1 ? 's' : ''} para tu evento 🎉
+        </Text>
+      )}
       <StatusBar style="auto" />
     </View>
   );
