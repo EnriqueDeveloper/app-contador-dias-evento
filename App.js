@@ -67,12 +67,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: { 
-    fontSize: 26, 
+    fontSize: 28, 
     marginBottom: 15 ,
     fontWeight:'bold'
   },
   result: { 
-    fontSize: 50, 
+    fontSize: 55, 
     
     color: '#007AFF' ,
     fontWeight:'bold'
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   boton:{
     backgroundColor:'#007AFF',
     color:'#fff',
-    borderRadius:10,
+    borderRadius:12,
   },
   textoboton:{
     color:'#fff',
